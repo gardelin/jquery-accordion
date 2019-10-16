@@ -8,22 +8,22 @@ Simple jQuery accordion library, perfect for FAQ (Frequently Asked Question) lis
 ## Usage
 
     <div  class="faq">
-    	<div  class="faqitem">
-    		<div  class="header">Test</div>
-    		<div  class="content">test content</div>
-    	</div>
-    	<div  class="faqitem">
-    		<div  class="header">Test</div>
-    		<div  class="content">test content</div>
-    	</div>
-    	<div  class="faqitem">
-    	<div  class="header">Test</div>
-    		<div  class="content">test content</div>
-    	</div>
+        <div  class="faqitem">
+            <div  class="header">Test</div>
+            <div  class="content">test content</div>
+        </div>
+        <div  class="faqitem">
+            <div  class="header">Test</div>
+            <div  class="content">test content</div>
+        </div>
+        <div  class="faqitem">
+        <div  class="header">Test</div>
+            <div  class="content">test content</div>
+        </div>
     </div>
 
     <script>
-    	$(".faq").accordion(options);
+        $(".faq").accordion(options);
     </script>
 
 ## Options
