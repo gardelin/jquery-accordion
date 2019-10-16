@@ -1,5 +1,6 @@
 # jQuery Accordion
-[![jQuery Accordion on NPM](https://img.shields.io/npm/v/@gardelin/jquery-accordion.svg?style=flat-square)](https://www.npmjs.com/package/@gardelin/jquery-accordion)[![Standard JavaScript Style](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square)](http://standardjs.com/)
+[![jQuery Accordion on NPM](https://img.shields.io/npm/v/@gardelin/jquery-accordion.svg?style=flat-square)](https://www.npmjs.com/package/@gardelin/jquery-accordion)
+[![Standard JavaScript Style](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square)](http://standardjs.com/)
 
 Simple jQuery accordion library, perfect for FAQ (Frequently Asked Question) list.
 ![Accordion](accordion.png)
