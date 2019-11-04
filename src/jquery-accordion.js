@@ -63,9 +63,7 @@
             }
 
             // bind events
-            $(this._element)
-                // .find(this._options.questionClass)
-                .on("click.jqueryaccordion", this._options.questionClass, this._handleQuestionClick.bind(this));
+            $(this._element).on("click.jqueryaccordion", this._options.questionClass, this._handleQuestionClick.bind(this));
 
             $(this._element).trigger("jqueryaccordioninit");
         },
@@ -76,8 +74,8 @@
          * @param {Event} e
          */
         _handleQuestionClick: function(e) {
+            e.stopPropagation();
             var $target = $(e.currentTarget);
-
             this.toggle($target);
         },
 
@@ -90,7 +88,8 @@
             $(this._element).trigger("jqueryaccordiontoggle");
             var $answer = element
                 .parent()
-                .find(this._options.answerClass);
+                .find(this._options.answerClass)
+                .first();
 
             var item = element.closest(this._options.itemClass);
             if (this._options.closeOthers)
@@ -103,6 +102,34 @@
             item.toggleClass("jquery-accordion-active")
             $answer.slideToggle(this._options.animationDuration);
             $(this._element).trigger("jqueryaccordiontoggled");
+        },
+        
+        /**
+         * Open accordion item
+         *
+         * @param {Object} item
+         * @return {Void}
+         */
+        open: function(item) {
+            item
+                .addClass("jquery-accordion-active")
+                .find(this._options.answerClass)
+                .first()
+                .slideDown(this._options.animationDuration);
+        },
+
+        /**
+         * Close accordion item
+         *
+         * @param {Object} item
+         * @return {Void}
+         */
+        close: function(item) {
+            item
+                .removeClass("jquery-accordion-active")
+                .find(this._options.answerClass)
+                .first()
+                .slideUp(this._options.animationDuration);
         },
 
         /**
